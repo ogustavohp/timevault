@@ -8,9 +8,9 @@ export default function Home() {
       {/* Left */}
       <div className="relative flex flex-col items-start justify-between overflow-hidden border-r border-white/10 bg-[url(../assets/bg-stars.svg)] bg-cover p-16 px-28 py-16">
         {/* Blur */}
-        <div className="blur-full absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50" />
+        <div className="absolute right-0 top-1/2 h-[288px] w-[526px] -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-700 opacity-50 blur-full" />
         {/* Stripes */}
-        <div className="bg-stripes absolute bottom-0 right-2 top-0 w-2" />
+        <div className="absolute bottom-0 right-2 top-0 w-2 bg-stripes" />
         {/* Sign In */}
         <a
           href=""
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <a
             href=""
-            className="font-alt inline-block rounded-full bg-green-500 px-5 py-3 text-sm uppercase leading-none text-black hover:bg-green-600"
+            className="inline-block rounded-full bg-green-500 px-5 py-3 font-alt text-sm uppercase leading-none text-black hover:bg-green-600"
           >
             CADASTRAR LEMBRANÇA
           </a>
@@ -50,7 +50,7 @@ export default function Home() {
             href="https://github.com/ogustavohp"
             className="underline hover:text-gray-100"
           >
-            ogustavohp
+            @ogustavohp
           </a>
           <span></span>
         </div>
