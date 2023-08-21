@@ -1,3 +1,6 @@
 {
-  "extends": "@ogustavohp/eslint-config/next-node"
+  "extends": "@ogustavohp/eslint-config/next-node",
+  "rules": {
+    "camelcase": "off"
+  }
 }
