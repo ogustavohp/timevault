@@ -14,10 +14,12 @@ export default function NewMemoryForm() {
 
     const formData = new FormData(e.currentTarget)
 
-    let coverUrl = ''
+    const fileToUpload = formData.get('coverUrl') as File
 
-    const fileToUpload = formData.get('coverUrl')
-    if (fileToUpload) {
+    let coverUrl =
+      'https://cdn.discordapp.com/attachments/744811848381104219/1148441727204605952/icon-image-not-found-free-vector.jpg'
+
+    if (fileToUpload.name) {
       const uploadFormData = new FormData()
       uploadFormData.set('file', fileToUpload)
 
@@ -28,6 +30,7 @@ export default function NewMemoryForm() {
 
     const token = Cookies.get('token')
 
+    console.log(coverUrl)
     await api.post(
       '/memories',
       {
