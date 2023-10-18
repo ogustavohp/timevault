@@ -13,11 +13,11 @@ export async function GET(request: NextRequest) {
 
   const redirectTo = request.cookies.get('redirectTo')?.value
 
-  const registerReponse = await api.post('/register', {
+  const registerResponse = await api.post('/register', {
     code,
   })
 
-  const { token } = registerReponse.data
+  const { token } = registerResponse.data
 
   const redirectURL = redirectTo ?? new URL('/', request.url)
 
