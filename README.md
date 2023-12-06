@@ -1,66 +1,66 @@
 # TimeVault
 
-Este é um projeto que consiste em várias partes: web, server e mobile. Siga as instruções abaixo para configurar e executar cada uma das partes.
+This project consists of multiple components: web, server, and mobile. Follow the instructions below to set up and run each part.
 
 ## Web
 
-1. Clone o projeto:
+1. Clone the project:
     ```bash
     git clone https://github.com/ogustavohp/timevault.git
     ```
 
-2. Navegue até o diretório web e instale as dependências:
+2. Navigate to the web directory and install dependencies:
     ```bash
     cd timevault/web
     npm install
     ```
 
-3. Crie o arquivo .env.local no diretório web e adicione a variável NEXT_PUBLIC_GITHUB_CLIENT_ID com seu GitHub Client ID.
+3. Create the .env.local file in the web directory and add the NEXT_PUBLIC_GITHUB_CLIENT_ID variable with your GitHub Client ID.
 
-4. No arquivo `api.ts` em `timevault/web`, altere a baseURL para o IP da sua internet.
+4. In the `api.ts` file in `timevault/web`, change the baseURL to your internet's IP.
 
-5. Execute a aplicação web:
+5. Run the web application:
     ```bash
     npm run dev
     ```
 
 ## Server
 
-1. No diretório principal do projeto, instale as dependências do servidor:
+1. In the project's root directory, install server dependencies:
     ```bash
     cd timevault/server
     npm install
     ```
 
-2. Crie o arquivo .env no diretório server e adicione as seguintes variáveis:
+2. Create the .env file in the server directory and add the following variables:
     - DATABASE_URL
     - GITHUB_CLIENT_ID
     - GITHUB_CLIENT_SECRET
 
-3. Execute o servidor:
+3. Run the server:
     ```bash
     npm run dev
     ```
 
 ## Mobile
 
-1. No diretório mobile, instale as dependências:
+1. In the mobile directory, install dependencies:
     ```bash
     cd timevault/mobile
     npm install
     ```
 
-2. Crie o arquivo .env no diretório mobile e adicione a variável EXPO_PUBLIC_GITHUB_CLIENT_ID.
+2. Create the .env file in the mobile directory and add the EXPO_PUBLIC_GITHUB_CLIENT_ID variable.
 
-3. No arquivo `api.ts` em `timevault/mobile/src/lib`, altere a baseURL para o IP da sua internet.
+3. In the `api.ts` file in `timevault/mobile/src/lib`, change the baseURL to your internet's IP.
 
-4. Execute a aplicação mobile:
+4. Run the mobile application:
     ```bash
     npm run start
     ```
 
-### Observações
+### Notes
 
-- A Authorization callback URL do projeto web deve ser em /api/auth/callback.
-- Para o projeto mobile, remova o código comentado nas linhas 44 a 48 do Authorization callback URL no GitHub e coloque o caminho que retorna.
+- The Authorization callback URL for the web project should be /api/auth/callback.
+- For the mobile project, remove the commented code from lines 44 to 48 in the GitHub Authorization callback URL and replace it with the returning path.
 
