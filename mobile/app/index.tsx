@@ -10,7 +10,7 @@ const discovery = {
   authorizationEndpoint: 'https://github.com/login/oauth/authorize',
   tokenEndpoint: 'https://github.com/login/oauth/access_token',
   revocationEndpoint:
-    'https://github.com/settings/connections/applications/84bb6ccc217cc56be65b',
+    `https://github.com/settings/connections/applications/${process.env.EXPO_PUBLIC_GITHUB_CLIENT_ID}`,
 }
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
 
   const [, response, signInWithGithub] = useAuthRequest(
     {
-      clientId: '84bb6ccc217cc56be65b',
+      clientId: process.env.EXPO_PUBLIC_GITHUB_CLIENT_ID,
       scopes: ['identity'],
       redirectUri: makeRedirectUri({
         scheme: 'timevault',
